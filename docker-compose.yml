@@ -1,0 +1,28 @@
+version: "3"
+services:
+  30-Days-of-Python:
+    build: .
+    image: build_boto3
+    container_name: 30DaysofPython
+    volumes:
+      - $PWD\30-Days-Of-Python\
+    ports:
+      - "80:80"
+
+  learn-Python:
+    build: .
+    image: build_boto3
+    container_name: learnPython
+    volumes:
+      - $PWD\learn-python\
+    ports:
+      - "8080:3000"
+
+  Python-programming-exercises:
+    build: .
+    image: build_boto3
+    container_name: PythonExercises
+    volumes:
+      - $PWD\Python-programming-exercises\
+    ports:
+      - "8081:4000"
