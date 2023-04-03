@@ -1,0 +1,15 @@
+
+docker swarm init
+docker swarm join --token <replace values>
+# command syntax
+docker service create --name <Service name> --replicas <#ofreplica> image
+docker node ls
+# run below for this project
+docker service create --name apacheService --replicas 10 httpd
+docker service create --name redisService --replicas 4 redis
+docker service create --name postgres-db -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres
+docker service ls
+docker service ps apacheService
+docker service inspect redisService 
+docker service rm <service name> <service name> 
+docker service ps apacheService — no-trunc
